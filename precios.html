@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZENFIT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div class="wrapper">
+          <div class="logo">
+            <a href="#">ZenFit</a>
+          </div>
+          <input type="radio" name="slide" id="menu_btn" />
+          <input type="radio" name="slide" id="cancel_btn" />
+          
+          <ul class="nav_links">
+            <label for="cancel_btn" class="btn cancel_btn">
+              <i class="fas fa-times"></i>
+            </label>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            
+            <li>
+              <a href="#" class="desktop_item">Mega Menu</a>
+              <input type="checkbox" id="showMega" />
+              <label for="showMega" class="mobile_item">Mega Menu</label>
+              <div class="mega_box">
+                <div class="content">
+                  <div class="row img_row">
+                    <div class="services_img"></div>
+                  </div>
+                  <div class="row">
+                    <header>Clases</header>
+                    <ul class="mega_links first_links">
+                      <li><a href="clases.html#id-galeria">Galeria</a></li>
+                      <li><a href="clases.html#id-section-card">Clases Destacadas</a></li>
+                      <li><a href="clases.html#id-section-table">Horario</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Entrenadores</header>
+                    <ul class="mega_links">
+                      <li><a href="entrenadores.html#id-section-trainer">Nuestros entrenadores</a></li>
+                      <li><a href="entrenadores.html#id-section-skill">Habilidades</a></li>
+                      <li><a href="entrenadores.html#id-section-rating">Rating</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Precios</header>
+                    <ul class="mega_links">
+                      <li><a href="precios.html#id-section-precios">Planes</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><button id="zenfit-toggle-mode" aria-label="Cambiar modo" class="zenfit-modo-btn">
+              ☀️
+            </button></li>
+          </ul>
+          <label for="menu_btn" class="btn menu_btn">
+            <i class="fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+</header>
+
+
+    <section id="id-section-precios" class="section-precios">
+        <h2>NUESTROS PLANES</h2>
+      
+        <!-- Toggle mensual/anual -->
+         <div class="planes-container">
+        <div class="toggle-container">
+          <input type="checkbox" id="toggle" hidden="">
+          <label for="toggle" class="switch">
+            <span class="option">Mensual</span>
+            <span class="slider"></span>
+            <span class="option">Anual</span>
+          </label>
+        </div>
+      
+        <!-- Tabla de precios -->
+        <div class="tabla-precios">
+          <div class="plan basico">
+            <h3 class="plan-title">Básico</h3>
+            <div class="ahorro">¡Ahorra 15% con el plan anual!</div>
+            <p class="precio mensual">AR$ 7000</p>
+            <p class="precio anual">AR$ 51000</p>
+            <ul class="ul-plan">
+              <li class="li-plan tooltip">Acceso a sala de musculación
+                <span class="tooltip-text">Incluye pesas, máquinas y zona de cardio</span>
+              </li>
+              <li class="li-plan"> 3 días por semana</li>
+              <li class="li-plan">1 clase semanal</li>
+              <li class="li-plan">Sin entrenador</li>
+            </ul>
+            <button class="button-plan">Elegir</button>
+          </div>
+      
+          <div class="plan intermedio recomendado-mensual">
+            <h3 class="plan-title">Intermedio</h3>
+            <div class="ahorro ahorro-intermedio">¡Ahorra 20% con el plan anual!</div>
+            <p class="precio mensual">AR$ 8500</p>
+            <p class="precio anual">AR$ 81600</p>
+            <ul class="ul-plan">
+              <li class=" li-plan tooltip">Acceso total
+                <span class="tooltip-text">Musculación, cardio y salón de clases</span>
+              </li>
+              <li class="li-plan"> 5 días por semana</li>
+              <li class="li-plan">3 clases semanales</li>
+              <li class="li-plan tooltip">Entrenador compartido
+                <span class="tooltip-text">Sesiones guiadas grupales</span>
+              </li>
+            </ul>
+            <button class="button-plan">Elegir</button>
+          </div>
+      
+          <div class="plan premium recomendado-anual">
+            <h3 class="plan-title">Premium</h3>
+            <div class="ahorro ahorro-premium">¡Ahorra 25% con el plan anual!</div>
+            <p class="precio mensual">AR$ 12000</p>
+            <p class="precio anual">AR$ 108000</p>
+            <ul class="ul-plan">
+                <li class="li-plan tooltip">Acceso ilimitado
+                    <span class="tooltip-text">Acceso libre a todas las areas </span>
+                </li>
+                <li class="li-plan"> Pase libre todo el mes</li>
+                <li class="li-plan tooltip">Clases ilimitadas
+                    <span class="tooltip-text">Acceso libre a todas las clases </span>
+                </li>
+              <li class="li-plan tooltip">Entrenador personal
+                <span class="tooltip-text">Puedes elegir al entrenador que más se ajuste a tus necesidades </span>
+              </li>
+            </ul>
+            <button class="button-plan">Elegir</button>
+          </div>
+        </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h3>ENCONTRANOS EN</h3>
+                <div class="content">
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763.5841821066429!2d-65.16315554784077!3d-24.442493051911935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bad8b91ac91bf%3A0xe66f0340da274a9a!2sLeopoldo%20Lugones%2C%20Y4608%20Monterrico%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1744241715169!5m2!1ses!2sar"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://facebook.com/coding.np" target="_blank"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="https://instagram.com/coding.np" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                        <a href="https://youtube.com/c/codingnepal" target="_blank"><span
+                                class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center box">
+                <h3>DIRECCION</h3>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Monterrio, Bario Lujan 540</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">Tel: 3885473876</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h3>SUSCRIBITE AL NEWLETTER</h3>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="btn-footer">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">ZENFIT | Todos los derechos reservadoss</span>
+            </center>
+        </div>
+    </footer>
+
+    <script src="js/zenfit-modo.js"></script>
+</body>
+
+</html>

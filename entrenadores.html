@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZENFIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="wrapper">
+              <div class="logo">
+                <a href="#">ZenFit</a>
+              </div>
+              <input type="radio" name="slide" id="menu_btn" />
+              <input type="radio" name="slide" id="cancel_btn" />
+              
+              <ul class="nav_links">
+                <label for="cancel_btn" class="btn cancel_btn">
+                  <i class="fas fa-times"></i>
+                </label>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                
+                <li>
+                  <a href="#" class="desktop_item">Mega Menu</a>
+                  <input type="checkbox" id="showMega" />
+                  <label for="showMega" class="mobile_item">Mega Menu</label>
+                  <div class="mega_box">
+                    <div class="content">
+                      <div class="row img_row">
+                        <div class="services_img"></div>
+                      </div>
+                      <div class="row">
+                        <header>Clases</header>
+                        <ul class="mega_links first_links">
+                          <li><a href="clases.html#id-galeria">Galeria</a></li>
+                          <li><a href="clases.html#id-section-card">Clases Destacadas</a></li>
+                          <li><a href="clases.html#id-section-table">Horario</a></li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <header>Entrenadores</header>
+                        <ul class="mega_links">
+                          <li><a href="entrenadores.html#id-section-trainer">Nuestros entrenadores</a></li>
+                          <li><a href="entrenadores.html#id-section-skill">Habilidades</a></li>
+                          <li><a href="entrenadores.html#id-section-rating">Rating</a></li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <header>Precios</header>
+                        <ul class="mega_links">
+                          <li><a href="precios.html#id-section-precios">Planes</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><button id="zenfit-toggle-mode" aria-label="Cambiar modo" class="zenfit-modo-btn">
+                  ☀️
+                </button></li>
+              </ul>
+              <label for="menu_btn" class="btn menu_btn">
+                <i class="fas fa-bars"></i>
+              </label>
+            </div>
+          </nav>
+    </header>
+
+
+
+    <section id="id-section-trainer" class="section-trainers">
+        <h2 class="title-trainers">NUESTROS ENTRENADORES</h2>
+        <div class="card-trainers">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZW50cmVuYWRvciUyMGd5bXxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Entrenador 1">
+                        <h3>Luis Gómez</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Especialista en musculación y fuerza. +10 años de experiencia ayudando a transformar cuerpos
+                            💪</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZW50cmVuYWRvciUyMGd5bXxlbnwwfHwwfHx8MA%3D%3D"
+                            alt="Entrenadora 2">
+                        <h3>Carla Díaz</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Instructora de yoga y meditación. Te guía a encontrar el equilibrio físico y mental 🧘‍♀️✨
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://images.unsplash.com/photo-1604480133435-25b86862d276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGVudHJlbmFkb3IlMjBneW18ZW58MHx8MHx8fDA%3D"
+                            alt="Entrenador 3">
+                        <h3>Matías Ríos</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Coach de CrossFit certificado. Te lleva al límite con entrenamientos dinámicos y exigentes 🔥
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="id-section-skill" class="skills-section">
+        <h2 class="skills-title">Habilidades de nuestros entrenadores</h2>
+
+        <div class="skills-grid">
+            <!-- Profesor 1 -->
+            <div class="trainer-skill">
+                <h3>Luis Gómez</h3>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Fuerza</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Resistencia</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Técnica</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profesor 2 -->
+            <div class="trainer-skill">
+                <h3>Carla Díaz</h3>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Flexibilidad</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Equilibrio</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Respiración</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profesor 3 -->
+            <div class="trainer-skill">
+                <h3>Matías Ríos</h3>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Potencia</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Velocidad</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-label">
+                        <span>Motivación</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="fill" style="--progress: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="id-section-rating" class="rating-trainers-section">
+        <h2>Calificá a nuestros entrenadores</h2>
+        <div class="rating-grid">
+
+            <!-- Profesor 1 -->
+            <div class="trainer-rating">
+                <h3>Luis Gómez</h3>
+                <div class="star-rating-wrapper">
+                    <div class="star-rating">
+                        <input type="radio" id="luis5" name="luis" /><label for="luis5"></label>
+                        <input type="radio" id="luis4" name="luis" /><label for="luis4"></label>
+                        <input type="radio" id="luis3" name="luis" /><label for="luis3"></label>
+                        <input type="radio" id="luis2" name="luis" /><label for="luis2"></label>
+                        <input type="radio" id="luis1" name="luis" /><label for="luis1"></label>
+                    </div>
+                    <p class="thanks-message">¡Gracias por tu valoración!</p>
+                </div>
+            </div>
+
+
+            <!-- Profesor 2 -->
+            <div class="trainer-rating">
+                <h3>Carla Díaz</h3>
+                <div class="star-rating-wrapper">
+                    <div class="star-rating">
+                        <input type="radio" id="carla5" name="carla" /><label for="carla5"></label>
+                        <input type="radio" id="carla4" name="carla" /><label for="carla4"></label>
+                        <input type="radio" id="carla3" name="carla" /><label for="carla3"></label>
+                        <input type="radio" id="carla2" name="carla" /><label for="carla2"></label>
+                        <input type="radio" id="carla1" name="carla" /><label for="carla1"></label>
+                    </div>
+                    <p class="thanks-message">¡Gracias por tu valoración!</p>
+                </div>
+            </div>
+
+            <!-- Profesor 3 -->
+            <div class="trainer-rating">
+                <h3>Matías Ríos</h3>
+                <div class="star-rating-wrapper">
+                    <div class="star-rating">
+                        <input type="radio" id="matias5" name="matias" /><label for="matias5"></label>
+                        <input type="radio" id="matias4" name="matias" /><label for="matias4"></label>
+                        <input type="radio" id="matias3" name="matias" /><label for="matias3"></label>
+                        <input type="radio" id="matias2" name="matias" /><label for="matias2"></label>
+                        <input type="radio" id="matias1" name="matias" /><label for="matias1"></label>
+                    </div>
+                    <p class="thanks-message">¡Gracias por tu valoración!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h3>ENCONTRANOS EN</h3>
+                <div class="content">
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763.5841821066429!2d-65.16315554784077!3d-24.442493051911935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bad8b91ac91bf%3A0xe66f0340da274a9a!2sLeopoldo%20Lugones%2C%20Y4608%20Monterrico%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1744241715169!5m2!1ses!2sar"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://facebook.com/coding.np" target="_blank"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="https://instagram.com/coding.np" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                        <a href="https://youtube.com/c/codingnepal" target="_blank"><span
+                                class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center box">
+                <h3>DIRECCION</h3>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Monterrio, Bario Lujan 540</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">Tel: 3885473876</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h3>SUSCRIBITE AL NEWLETTER</h3>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="btn-footer">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">ZENFIT | Todos los derechos reservadoss</span>
+            </center>
+        </div>
+    </footer>
+
+    <script src="js/zenfit-modo.js"></script>
+</body>
+
+</html>

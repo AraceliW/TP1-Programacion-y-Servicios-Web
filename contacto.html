@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZENFIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div class="wrapper">
+          <div class="logo">
+            <a href="#">ZenFit</a>
+          </div>
+          <input type="radio" name="slide" id="menu_btn" />
+          <input type="radio" name="slide" id="cancel_btn" />
+          
+          <ul class="nav_links">
+            <label for="cancel_btn" class="btn cancel_btn">
+              <i class="fas fa-times"></i>
+            </label>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            
+            <li>
+              <a href="#" class="desktop_item">Mega Menu</a>
+              <input type="checkbox" id="showMega" />
+              <label for="showMega" class="mobile_item">Mega Menu</label>
+              <div class="mega_box">
+                <div class="content">
+                  <div class="row img_row">
+                    <div class="services_img"></div>
+                  </div>
+                  <div class="row">
+                    <header>Clases</header>
+                    <ul class="mega_links first_links">
+                      <li><a href="clases.html#id-galeria">Galeria</a></li>
+                      <li><a href="clases.html#id-section-card">Clases Destacadas</a></li>
+                      <li><a href="clases.html#id-section-table">Horario</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Entrenadores</header>
+                    <ul class="mega_links">
+                      <li><a href="entrenadores.html#id-section-trainer">Nuestros entrenadores</a></li>
+                      <li><a href="entrenadores.html#id-section-skill">Habilidades</a></li>
+                      <li><a href="entrenadores.html#id-section-rating">Rating</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Precios</header>
+                    <ul class="mega_links">
+                      <li><a href="precios.html#id-section-precios">Planes</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><button id="zenfit-toggle-mode" aria-label="Cambiar modo" class="zenfit-modo-btn">
+              ☀️
+            </button></li>
+          </ul>
+          <label for="menu_btn" class="btn menu_btn">
+            <i class="fas fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+  </header>
+
+    
+   
+    <section class="section-contacto">
+        <h2>Formulario de Contacto</h2>
+      
+        <form id="contacto" class="form-contacto">
+          <div class="form-contacto__group full">
+            <label for="nombre" class="form-contacto__label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-contacto__input" required minlength="3">
+          </div>
+      
+          <div class="form-contacto__group">
+            <label for="email" class="form-contacto__label">Email:</label>
+            <input type="email" id="email" name="email" class="form-contacto__input" required>
+          </div>
+      
+          <div class="form-contacto__group">
+            <label for="telefono" class="form-contacto__label">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="form-contacto__input" pattern="[0-9]{8,15}" required>
+          </div>
+      
+          <div class="form-contacto__group full">
+            <label for="mensaje" class="form-contacto__label">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" class="form-contacto__input" required minlength="10"></textarea>
+          </div>
+      
+          <div class="form-contacto__group full" style="text-align:center;">
+            <div class="form-contacto__spinner" id="spinner" style="display: none;"></div>
+          </div>
+      
+          <button type="submit" class="form-contacto__button">Enviar</button>
+        </form>
+      
+        <div class="form-contacto__modal" id="modal" style="display: none;">
+          <div class="form-contacto__modal-content">
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactarte con nosotros.</p>
+          </div>
+        </div>
+      </section>
+      
+
+        <script src="js/contacto.js"></script>
+  
+
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h3>ENCONTRANOS EN</h3>
+                <div class="content">
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763.5841821066429!2d-65.16315554784077!3d-24.442493051911935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bad8b91ac91bf%3A0xe66f0340da274a9a!2sLeopoldo%20Lugones%2C%20Y4608%20Monterrico%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1744241715169!5m2!1ses!2sar"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://facebook.com/coding.np" target="_blank"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="https://instagram.com/coding.np" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                        <a href="https://youtube.com/c/codingnepal" target="_blank"><span
+                                class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center box">
+                <h3>DIRECCION</h3>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Monterrio, Bario Lujan 540</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">Tel: 3885473876</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h3>SUSCRIBITE AL NEWLETTER</h3>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="btn-footer">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">ZENFIT | Todos los derechos reservadoss</span>
+            </center>
+        </div>
+    </footer>
+
+
+    <script src="js/zenfit-modo.js"></script>
+</body>
+
+</html>

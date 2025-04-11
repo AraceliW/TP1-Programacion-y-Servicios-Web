@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZENFIT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="wrapper">
+              <div class="logo">
+                <a href="#">ZenFit</a>
+              </div>
+              <input type="radio" name="slide" id="menu_btn" />
+              <input type="radio" name="slide" id="cancel_btn" />
+              
+              <ul class="nav_links">
+                <label for="cancel_btn" class="btn cancel_btn">
+                  <i class="fas fa-times"></i>
+                </label>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                
+                <li>
+                  <a href="#" class="desktop_item">Mega Menu</a>
+                  <input type="checkbox" id="showMega" />
+                  <label for="showMega" class="mobile_item">Mega Menu</label>
+                  <div class="mega_box">
+                    <div class="content">
+                      <div class="row img_row">
+                        <div class="services_img"></div>
+                      </div>
+                      <div class="row">
+                        <header>Clases</header>
+                        <ul class="mega_links first_links">
+                          <li><a href="clases.html#id-galeria">Galeria</a></li>
+                          <li><a href="clases.html#id-section-card">Clases Destacadas</a></li>
+                          <li><a href="clases.html#id-section-table">Horario</a></li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <header>Entrenadores</header>
+                        <ul class="mega_links">
+                          <li><a href="entrenadores.html#id-section-trainer">Nuestros entrenadores</a></li>
+                          <li><a href="entrenadores.html#id-section-skill">Habilidades</a></li>
+                          <li><a href="entrenadores.html#id-section-rating">Rating</a></li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <header>Precios</header>
+                        <ul class="mega_links">
+                          <li><a href="precios.html#id-section-precios">Planes</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><button id="zenfit-toggle-mode" aria-label="Cambiar modo" class="zenfit-modo-btn">
+                  ☀️
+                </button></li>
+              </ul>
+              <label for="menu_btn" class="btn menu_btn">
+                <i class="fas fa-bars"></i>
+              </label>
+            </div>
+          </nav>
+    </header>
+
+
+  <main id="hero">
+        <div class="promo">
+            <h1 class="home-title">ZENFIT</h1>
+            <p class="home-text">Entrená en un espacio donde la disciplina se encuentra con el equilibrio.</p>
+        </div>
+    
+        <video muted autoplay loop>
+            <source src="img/Cinematic-Fitness-Video.mp4" type="video/mp4">
+        </video>
+
+        <div class="capa"></div>
+  </main>
+
+
+  <section class="section-card">
+    <h2>CLASES DESTACADAS</h2>
+    <div class="container-card">
+      <div class="cards">
+          <div class="card">
+              <div class="icon">
+                  <img src="https://img.icons8.com/?size=100&id=FIjSnPZnvtco&format=png&color=b45c24" alt="Twitter">
+              </div>
+              <div class="title">Power HIIT</div>
+              <div class="description">Entrenamientos cortos e intensos para quemar grasa y aumentar resistencia.</div>
+              <div class="rank">1</div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <img src="https://img.icons8.com/?size=100&id=LlHggzGt3pif&format=png&color=b45c24" alt="Instagram">
+              </div>
+              <div class="title">Zen Stretch</div>
+              <div class="description">Clases para relajar el cuerpo y activar la flexibilidad con flow.</div>
+              <div class="rank">2</div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <img src="https://img.icons8.com/?size=100&id=vKnYmLFp4nQO&format=png&color=b45c24" alt="YouTube">
+              </div>
+              <div class="title">FitBox</div>
+              <div class="description">Boxeo sin contacto con combos de cardio y fuerza explosiva.</div>
+              <div class="rank">3</div>
+          </div>
+          
+      </div>
+  </div>
+  </section>
+
+
+  <section class="section-contador">
+    <h2>CIFRAS QUE INSPIRAN</h2>
+    <div class="contador">0</div>
+    <p class="contador-text">Socios satisfechos</p>
+  </section>
+
+  <script>
+    const contador = document.querySelector(".contador");
+    const target = 500;
+    const velocidad = 8;
+    const pausa = 3000; // milisegundos entre repeticiones
+    let started = false;
+  
+    function contar() {
+      let count = 0;
+  
+      const interval = setInterval(() => {
+        count++;
+        contador.textContent = count;
+  
+        if (count === target) {
+          clearInterval(interval);
+          contador.textContent = count + "+";
+  
+          // Espera y vuelve a empezar
+          setTimeout(() => {
+            contador.textContent = "0";
+            contar(); // reinicia
+          }, pausa);
+        }
+      }, velocidad);
+    }
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          contar(); // arranca una sola vez cuando aparece
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+  
+    observer.observe(contador);
+  </script>
+  
+  <div class="title-testimonial">
+    <h2>TESTIMONIOS</h2>
+  </div>
+
+  <section class="section-testimonial">
+    <input type="radio" name="position"  />
+    <input type="radio" name="position"  />
+    <input type="radio" name="position"  checked/>
+    <input type="radio" name="position"  />
+    <input type="radio" name="position"  />
+    <div id="carousel">
+      <div class="item">
+        <img src="https://images.stockcake.com/public/d/6/3/d63a34ac-d6a0-450a-9815-04b200e5a0f1_large/strength-through-dedication-stockcake.jpg">
+        <h3 class="name">Martín, 32 años - Power HIIT</h3>
+        <p class="testimonial">En solo tres meses, mi cuerpo y mi mente dieron un giro completo.</p>
+      </div>
+      <div class="item">
+        <img src="https://images.stockcake.com/public/8/0/1/801f9ed0-9c89-4571-80e3-ba420004396a_large/focused-gym-workout-stockcake.jpg">
+        <h3 class="name">Laura, 27 años - Yoga Zen</h3>
+        <p class="testimonial">Cada clase me ayuda a soltar el estrés del día. ZenFt es mi espacio de paz.</p>
+      </div>
+      <div class="item">
+        <img src="https://images.stockcake.com/public/f/b/0/fb06eef4-e5e3-473a-a8bf-ee9233589dbc_large/strength-in-focus-stockcake.jpg">
+        <h3 class="name">Nico, 40 años - Full Body</h3>
+        <p class="testimonial">El progreso es real y la motivación del grupo lo cambia todo.</p>
+      </div>
+      <div class="item">
+        <img src="https://images.stockcake.com/public/1/0/4/104ff9a1-a407-4e91-bb21-3213100a1a47_large/strength-in-focus-stockcake.jpg">
+        <h3 class="name">Sofía, 35 años - Funcional</h3>
+        <p class="testimonial">Después de años sin entrenar, acá me sentí bienvenida y motivada. Volví a confiar en mí.</p>
+      </div>
+      <div class="item">
+        <img src="https://images.stockcake.com/public/9/6/c/96cb9e40-9d48-4f6e-823e-652a7a708680_large/focused-strength-training-stockcake.jpg">
+        <h3 class="name">Facu, 29 años - Cardio Mix</h3>
+        <p class="testimonial">El ambiente es top, y cada clase me deja con más energía que nunca.</p>
+      </div>
+    </div>
+   </section>
+
+
+  <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h3>ENCONTRANOS EN</h3>
+                <div class="content">
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763.5841821066429!2d-65.16315554784077!3d-24.442493051911935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bad8b91ac91bf%3A0xe66f0340da274a9a!2sLeopoldo%20Lugones%2C%20Y4608%20Monterrico%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1744241715169!5m2!1ses!2sar"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://facebook.com/coding.np" target="_blank"><span
+                                class="fab fa-facebook-f"></span></a>
+                        <a href="https://instagram.com/coding.np" target="_blank"><span
+                                class="fab fa-instagram"></span></a>
+                        <a href="https://youtube.com/c/codingnepal" target="_blank"><span
+                                class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center box">
+                <h3>DIRECCION</h3>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Monterrio, Bario Lujan 540</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">Tel: 3885473876</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h3>SUSCRIBITE AL NEWLETTER</h3>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="btn-footer">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">ZENFIT | Todos los derechos reservadoss</span>
+            </center>
+        </div>
+    </footer>
+
+    <script src="js/zenfit-modo.js"></script>
+
+  
+</body>
+</html>
